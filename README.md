@@ -26,6 +26,29 @@ while a != 1:                        # while 'a' not equal to one
     elif (a % 2) != 0:               # else if 'a' is odd then it is multiplied by 3 and then 1 is added
         a = (a * 3) + 1
  
-       
+Week 5 - Write a program that outputs whether today is a weekday or a weekend
+import datetime                 # we import datetime
+x = datetime.datetime.now()      # we create variable using function datetime.datetime.now()
+y = x.weekday()                   # we create variable y
+z = str(input('Ask me a tricky question, like "Weekday or weekend?"'))     # we create variable for user to input a question
+
+question = ("Weekday or weekend?")
+
+while z == question:
+
+    if y <= 3:                                                          # if today is Monday to Thursday - program answers
+        print("Unfortunately today is still a weekday.")                   
+        break                   
+    elif y == 4:                                                        # If today is Friday - program answers
+        print("Hold on, still weekday but nearly there, my friend")        
+        break
+
+    elif y == 5 or 6:                                                   # If today is Saturday or Sunday - program answers
+        print("It is weekend, thanks God!")                     
+        break                     
+    
+else:                                                                   # If incorrect input - program answers
+                               
+
 © 2020 GitHub, Inc.
 
