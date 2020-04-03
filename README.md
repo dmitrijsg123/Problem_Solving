@@ -62,12 +62,27 @@ def sqrt(b,no_of_guesses):                     # we create a function sqrt, wher
         new_x = 1/2 * (x + b/x)
         x = new_x
     return new_x
-
 b = float(input("Enter a positive number: "))    # we create variable for user to input a positive number
 a = sqrt(b,3)                                    # we can choose any number of guesses (remember Newton - "each next guess will be closer to exact value"), let's choose 3 
-
 print("The square root of {} is approx. {}".format(b,round(a,2)))     # we will round the final result to 2 decimal places
 
+
+Week 7 - Count a number of letters "w" in a text file - extract from "Alice in Wonderland" by Lewis Carroll
+from collections import Counter                           # collection imported as seen on stackoverflow.com
+with open("alice.txt") as f:                              # we open text file 
+    L = []                                                # create a list
+    letter_count = Counter()
+    for x in f:
+        letter_count = Counter(x)
+        w_count = letter_count["w"]
+        L.append(w_count)                                                   
+    numbers = [L]                                                          
+    max = numbers[0]                                                        
+    for number in numbers:
+        if number > max:
+            max = number
+        y = sum(max)                                                        
+        print(y)   
 
 © 2020 GitHub, Inc.
 
